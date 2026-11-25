@@ -386,7 +386,7 @@ const periodLabel = id => (getPeriod(id)||{}).label || '—';
 /* ===== roteamento ===== */
 function parseHash(){ const params = new URLSearchParams(window.location.hash.replace('#','')); return { session: params.get('session') }; }
 // Endereço público onde ESTE arquivo HTML está hospedado (https://...). Obrigatório para o QR/link funcionar em outros aparelhos.
-const PUBLIC_URL = "";
+const PUBLIC_URL = "https://ph777547.github.io/Conforto-t-rmico/";
 function buildParticipantLink(id){ return (PUBLIC_URL || window.location.href).split('#')[0] + '#session=' + id; }
 function linkIsLocal(){ return !PUBLIC_URL && !/^https?:$/.test(window.location.protocol); }
 const LOCAL_WARN = `<div class="warn-box" style="margin-bottom:12px;">⚠ Este arquivo está aberto direto do computador (ou de uma pré-visualização), então o link e o QR Code <strong>só funcionam neste aparelho</strong>. Hospede o HTML em um endereço https:// e cole-o em <code>PUBLIC_URL</code> no início do script.</div>`;
